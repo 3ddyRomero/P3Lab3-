@@ -103,6 +103,12 @@ return 0;
 
 int ElDos(){
 int x;
+int rad;
+
+cout<<"Ingrese el grado: ";
+cin>>x;
+
+rad = x * (180/PI);
 
 
 
