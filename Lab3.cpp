@@ -8,11 +8,12 @@ using namespace std;
 
 int menu();
 int Eluno();
-int ElDos();
+double ElDos();
 int pascal();
 int fact();
 int ElTres();
 int ElCuatro();
+long facto();
 
 int main(){
     char ejecucion = 'y';
@@ -101,18 +102,38 @@ int poli[2];
 return 0;
 }
 
-int ElDos(){
-int x;
-int rad;
+double ElDos(){
+double x;
+double rad;
+double a,b;
 
 cout<<"Ingrese el grado: ";
 cin>>x;
 
 rad = x * (180/PI);
-
-
+for(int i=0;i<=15;i++){
+     a = ((pow(-1,i)) / facto((2*i)+1)) * pow(rad,(2*i)+1);
 
 }
+
+
+
+return 0.0;
+
+}
+
+long facto(int n){
+{
+    if(n<2){
+
+        return 1;
+    }else{
+
+        return n * fact(n-1);
+    }
+
+}
+
 
 int fact(int n){
     if(n<2){
