@@ -12,7 +12,7 @@ int ElDos();
 int pascal();
 int fact();
 int ElTres();
-
+int ElCuatro();
 
 int main(){
     char ejecucion = 'y';
@@ -30,7 +30,11 @@ int main(){
             ElTres();
             break;
         }
-        case 4:
+	case 4:{
+	    ElCuatro();
+	    break;
+	}
+        case 5:
             ejecucion = 'n';
             cout<<"La ejecución ha finalizado "<< endl;
             cout<< "****\\\\Buen dia//****" << endl;
@@ -50,8 +54,9 @@ int menu(){
     cout << "/****Menu****\\" << endl;
     cout << "1. Ejercicio 1." << endl;
     cout << "2. Ejercicio 2." << endl;
-    cout << "3. Ejercicio 3." << endl;
-    cout << "4. Salir." << endl;
+    cout << "3. Ejercicio 3 (Con Numeros)." << endl;
+    cout << "4. Ejercicio 3 (Con Caracteres)." << endl;
+    cout << "5. Salir." << endl;
     cout << "Ingrese una opcion: ";
     cin >> opcion;
     cout<<"------------------------------------------------"<<endl;
@@ -97,14 +102,18 @@ return 0;
 }
 
 int ElDos(){
+int x;
+
 
 
 }
 
 int fact(int n){
     if(n<2){
+	    
         return 1;
     }else{
+	    
         return n * fact(n-1);
     }
 }
@@ -124,19 +133,47 @@ int pascal(int a, int b){
 }
 
 
+
 int ElTres(){
 int SIZE; 
 int t=30;
-cout<<"Ingrese el tamaño de la secuaencia: "<<endl;
-cin>>SIZE;
-     for(int i=0; i<=SIZE; i++) {
+
+
+        cout<<"Ingrese el tamaño de la secuaencia: "<<endl;
+	cin>>SIZE;
+
+    for(int i=0; i<=SIZE; i++) {
 	     cout<<setw(t-i);
         for(int c = 0; c<=i; c++)
-      	      
+      	     
 	cout << pascal(i, c) << " ";
-        cout<<endl;
+	    
+	cout<<endl;
     }
+
     return 0;
 }
 
+int ElCuatro(){
+int SIZE;
+int t=30;
+ 
+ 
+         cout<<"Ingrese el tamaño de la secuaencia: "<<endl;
+         cin>>SIZE;
+ 
+     for(int i=0; i<=SIZE; i++) {
+              cout<<setw(t-i);
+         for(int c = 0; c<=i; c++)
+           if (i%2==0)    
+         //cout << pascal(i, c) << " ";
+             cout<<" * ";        
+           else 
+              cout<<" . ";
+         cout<<endl;
+     }
+ 
+     return 0;
 
+
+}
