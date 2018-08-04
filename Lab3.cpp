@@ -13,7 +13,7 @@ int pascal();
 int fact();
 int ElTres();
 int ElCuatro();
-long facto();
+long facto(long);
 
 int main(){
     char ejecucion = 'y';
@@ -112,25 +112,13 @@ cin>>x;
 
 rad = x * (180/PI);
 for(int i=0;i<=15;i++){
-     a = ((pow(-1,i)) / facto((2*i)+1)) * pow(rad,(2*i)+1);
 
+	a = ((pow(-1,i)) / facto((2*i)+1)) * pow(rad,(2*i)+1);
+	b += a;
 }
-
-
+cout<<b<<endl;
 
 return 0.0;
-
-}
-
-long facto(int n){
-{
-    if(n<2){
-
-        return 1;
-    }else{
-
-        return n * fact(n-1);
-    }
 
 }
 
@@ -202,5 +190,16 @@ int t=30;
  
      return 0;
 
+
+}
+
+long facto(long n){
+    if(n<2){
+
+        return 1;
+    }else{
+
+        return n * fact(n-1);
+    }
 
 }
