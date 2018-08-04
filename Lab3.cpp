@@ -105,19 +105,26 @@ return 0;
 double ElDos(){
 double x;
 double rad;
-double a,b;
+double a,b,c,d;
 
 cout<<"Ingrese el grado: ";
 cin>>x;
 
-rad = x * (180/PI);
+rad = x * PI/180;
 for(int i=0;i<=15;i++){
 
 	a = ((pow(-1,i)) / facto((2*i)+1)) * pow(rad,(2*i)+1);
 	b += a;
 }
-cout<<b<<endl;
+cout<<"Seno: "<<b<<endl;
 
+
+for(int i=0;i<=15;i++){
+
+  c = ((pow(-1,i)) / facto(2*i)) * pow(rad,(2*i));
+  d += c;
+}
+cout<<"Coseno: "<<d<<endl;
 return 0.0;
 
 }
